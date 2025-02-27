@@ -1,0 +1,67 @@
+<div class="w-full overflow-hidden justify bg-lightBack">
+    <div class="marquee text-2xl font-semibold text-gray-800 h-20 p-5  text-center align-middle ">
+        @for (item of marqueeIteam; track $index) {
+        <span class="mr-10">{{item}}</span>
+        }
+    </div>
+</div>
+
+<div>
+    <div class="flex justify justify-between mx-14 my-2">
+        <div>
+            <h2 class="text-3xl font-semibold text-gray-800 ml-8">Bestseller Products</h2>
+            <p class="mt-2 text-gray-600  ml-8">Discover your unique style today.</p>
+
+        </div>
+
+        <div class="mt-2  text-center mr-7 ">
+            <button
+                class="inline-block mx-2 bg-orange text-white px-4 py-1 shadow shadow-black hover:bg-orange rounded-full ">
+                ← Previous
+            </button>
+            <button routerLink="/product-list"
+                class="inline-block  bg-orange text-white px-2 py-1 shadow shadow-black hover:bg-orange rounded-full">
+                Explore More →
+            </button>
+        </div>
+    </div>
+    <div class="mt-8 grid grid-cols-1 md:grid-cols-4 gap-1 mx-28 group">
+
+        <div class=" overflow-hidden ">
+            <img src="https://img.freepik.com/free-photo/medium-shot-girl-posing-with-hat_23-2149067092.jpg?t=st=1723111916~exp=1723115516~hmac=ed931638d3f938221e15d559e67f8e9d457e12234a957ccc960328f222bdd2f5&w=360"
+                alt="Product 1"
+                class="w-60 h-72 object-cover rounded-full hover:border border-b-4 border-black hover:shadow-lg ">
+            <button
+                class="hidden  group-hover:flex absolute bottom-4  right-20 mb-4 bg-transparent 
+         text-white px-4 py-2 rounded-full opacity-50 pointer-events-none group-hover:bg-orange group-hover:pointer-events-auto group-hover:opacity-100 ">
+                Shop Now
+            </button>
+            <Span class="font-semibold align-middle mx-14">Kids Fashion</Span>
+
+        </div>
+        <div class="   overflow-hidden   ">
+            <img src="https://img.freepik.com/premium-photo/sweet-smile-woman-green-sari-carrying-plate-sweet_992397-17935.jpg?w=360"
+                alt="Product 1"
+                class="w-60 h-72 object-cover rounded-full hover:border border-b-4 border-black hover:shadow-lg ">
+            <Span class="font-semibold align-middle mx-16 my-5">Women Fashion</Span>
+
+        </div>
+        <div class=" overflow-hidden ">
+            <img src="https://img.freepik.com/free-photo/young-beautiful-smiling-woman-looking-trendy-girl-casual-summer-overalls-clothes-hat_158538-1533.jpg?t=st=1723111724~exp=1723115324~hmac=6f9f40ae0bccf49c9fb406746c74d6c5165378428e227f3770628eac904d1154&w=740"
+                alt="Product 1"
+                class="w-60 h-72 object-cover rounded-full hover:border border-b-4 border-black hover:shadow-lg">
+            <Span class="font-semibold align-middle mx-16">New Arrivals</Span>
+
+        </div>
+        <div class=" overflow-hidden ">
+            <img src="https://img.freepik.com/free-photo/brutal-hipster-handsome-stylish-bearded-man-brown_285396-4623.jpg?t=st=1723115316~exp=1723118916~hmac=2e542adb7809747a9b72fb0903d547c8ec9729307536cbf274cc4cd9b252ba19&w=826"
+                alt="Product 1"
+                class="w-60 h-72 object-cover rounded-full hover:border border-b-4 border-black hover:shadow-lg">
+            <Span class="font-semibold align-middle mx-16">Boys Fashion</Span>
+
+        </div>
+
+
+    </div>
+    <app-winter-card></app-winter-card>
+</div>

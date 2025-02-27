@@ -1,0 +1,192 @@
+<div class="bg-lightPink">
+  <div class="flex flex-col items-center justify-center min-h-screen bg-[#fef8f5]">
+    <div class="max-w-5xl mx-auto p-8">
+
+      <h2 class="text-3xl font-semibold text-center mb-8">What say about us</h2>
+
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <div class="bg-[#ffece8] p-6 rounded-3xl shadow-lg relative hover:shadow-black">
+          <div class="absolute -top-3 right-6 flex items-center">
+            <span class="text-yellow-500">★★★★★</span>
+          </div>
+          <p class="text-lg text-gray-800 mb-4">
+            "What sets them apart from other online stores is their attention to detail - the packaging is beautiful and
+            the items are delivered on time."
+          </p>
+          <div class="flex items-center">
+            <img
+              src="https://img.freepik.com/premium-photo/3d-rendered-ultrarealistic-young-beautiful-happy-girl-with-shopping-bags-solid-background_1066261-82778.jpg?w=740"
+              alt="Ronald Richards" class="w-12 h-12 rounded-full mr-4">
+            <div>
+              <h4 class="font-semibold">Ronald Richards</h4>
+              <p class="text-sm text-gray-500">Milan, Italy</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="bg-[#ffece8] p-6 rounded-3xl shadow-lg relative hover:shadow-black">
+          <div class="absolute -top-3 right-6 flex items-center">
+            <span class="text-yellow-500">★★★★★</span>
+          </div>
+          <p class="text-lg text-gray-800 mb-4">
+            "Their collection is always on-trend and high-quality, and I can always find something that fits my personal
+            style. I will definitely order more!"
+          </p>
+          <div class="flex items-center">
+            <img
+              src="https://img.freepik.com/premium-photo/portrait-beautiful-woman-pink-background_118454-27987.jpg?w=826"
+              alt="Theresa Webb" class="w-12 h-12 rounded-full mr-4">
+            <div>
+              <h4 class="font-semibold">Theresa Webb</h4>
+              <p class="text-sm text-gray-500">Paris, France</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="bg-[#ffece8] p-6 rounded-3xl shadow-lg relative hover:shadow-black">
+          <div class="absolute -top-3 right-6  flex items-center">
+            <span class="text-yellow-500">★★★★★</span>
+          </div>
+          <p class="text-lg text-gray-800 mb-4">
+            "The best part is that their customer service is fantastic. I would highly recommend this store to anyone
+            looking for great fashion finds."
+          </p>
+          <div class="flex items-center">
+            <img
+              src="https://img.freepik.com/free-photo/young-woman-with-shopping-bags-beautiful-dress_1303-17550.jpg?ga=GA1.2.587405150.1707884731&semt=ais_hybrid"
+              alt="Jessica Robinson" class="w-12 h-12 rounded-full mr-4">
+            <div>
+              <h4 class="font-semibold">Jessica Robinson</h4>
+              <p class="text-sm text-gray-500">London, United Kingdom</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div>
+    <div class="mt-10 ">
+      <span class="text-3xl font-bold mx-10 mt-10 ">Featured Blog Posts For You</span>
+      <button class="rounded-full text-white bg-orange px-6 py-2 shadow-lg shadow-black float-right mr-14">View More
+        →</button>
+      <div class="flex space-x-4 m-14 ">
+        <div class="shadow-md px-3 py-3 rounded-lg">
+          <img
+            src="https://img.freepik.com/free-photo/women-making-preparations-wedding_23-2149184354.jpg?ga=GA1.1.1746845687.1722586531&semt=ais_hybrid"
+            class="h-80 w-96 object-cover rounded-lg mb-4">
+          <span class="text-xl font-bold text-gray-700 py-8">Effortless elegance:The minimalist <br>fashion
+            movement</span><br>
+          <span class="text-sm text-gray-700 pt-4">From bold prints to statement accessories,discover how to elevate
+            your style</span>
+        </div>
+        <div class="shadow-md px-3 py-3 rounded-lg">
+          <img
+            src="https://img.freepik.com/free-photo/high-angle-girl-posing-pink-dress_23-2149861206.jpg?ga=GA1.1.1746845687.1722586531&semt=ais_hybrid"
+            class="h-80 w-96 object-cover rounded-lg mb-4">
+          <span class="text-xl font-bold text-gray-700 py-8">Power Dessing:Chanelling confidence <br>through
+            fashion</span><br>
+          <span class="text-sm text-gray-700 pt-4">From bold prints to statement accessories,discover how to elevate
+            your style</span>
+        </div>
+        <div class="shadow-md px-3 py-3 rounded-lg">
+          <img
+            src="https://img.freepik.com/premium-photo/ready-kick-it-retro-style-ready-kick-it-retro-style_590464-27993.jpg?ga=GA1.1.1746845687.1722586531&semt=ais_hybrid"
+            class="h-80 w-96 object-cover rounded-lg mb-4">
+          <span class="text-xl font-bold text-gray-700 py-8">Exploring Spring fashion colors</span><br>
+          <span class="text-sm text-gray-700 pt-4">From bold prints to statement accessories,discover how to elevate
+            your style</span>
+
+
+        </div>
+      </div>
+
+      <div class="w-full overflow-hidden justify bg-lightBack">
+        <div class="marquee text-2xl font-semibold text-gray-800 h-20 p-5  text-center align-middle ">
+          @for (item of marqueeIteam; track $index) {
+          <span class="mr-10 even:text-gray-500">{{item}}</span>
+          }
+        </div>
+      </div>
+
+      <div class="flex items-center justify-center min-h-screen bg-[#fef8f5]">
+        <div class="relative w-full max-w-4xl h-[400px] bg-cover bg-center rounded-3xl overflow-hidden "
+          style="background-image: url('https://img.freepik.com/free-photo/3d-rendering-minimal-scandinavian-wood-walk-closet-with-wardrobe_105762-2300.jpg?ga=GA1.1.1746845687.1722586531&semt=ais_hybrid%22');">
+
+          <div class="absolute inset-0 bg-black opacity-20"></div>
+
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="bg-white p-8 rounded-3xl shadow-2xl max-w-md w-full border-black border">
+              <h2 class="text-2xl font-semibold mb-4">Sign up to get a discount</h2>
+              <p class="text-gray-600 mb-6">
+                We strive to make fashion accessible to everyone, no matter your budget. We are dedicated to curating a
+                wide range of high-quality.
+              </p>
+              <form class="flex space-x-4   ">
+                <input type="email" placeholder="Enter your email"
+                  class="bg-lightPink flex-1 px-2 py-1 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange">
+                <button type="submit"
+                  class="px-6 py-2 bg-orange text-white font-semibold rounded-full hover:bg-orange border border-b-4 border-black">
+                  Subscribe now
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex m-14 space-x-8 mx-28">
+        <div id="pages" class="bg-lime-300 rounded-xl pr-36 p-12 ">
+          <p class="font-bold pb-4">Pages</p>
+          <p class="underline text-gray-700 pb-2">New Arrival</p>
+          <p class="underline text-gray-700 pb-2">Shop</p>
+          <p class="underline text-gray-700 pb-2">Services</p>
+          <p class="underline text-gray-700 pb-2">Collection</p>
+          <p class="underline text-gray-700 pb-2">About us</p>
+          <p class="underline text-gray-700 pb-2">Contact us</p>
+        </div>
+        <div class="bg-violet-400 rounded-xl p-14" id="address">
+          <p class="font-bold text-center pb-4 text-lg">Chic Coture</p>
+          <p class="text-sm text-gray-700 text-center">Welcome to Chic Coture,your go-to for timeless elegance<br>and
+            modern style.Explore our carefully curated collections.<br>featuring pieces crafted with meticulous
+            attention to detail.</p>
+          <p class="text-sm text-gray-700 text-center pb-4">Elevate your wardrobe with Chic Coture.</p>
+          <p class="text-sm text-gray-700 text-center">ADDRESS:6688Princess Road,London,Greater<br>London BAS 23JK,UK.
+          </p>
+          <p class="text-sm text-center text-gray-700">PHONE:(012) 800 456 789-987</p>
+        </div>
+        <div class="bg-[#FC6F42] rounded-lg p-8 relative " id="social">
+          <p class="font-bold text-lg pb-4 text-center pr-20">Let's Get Social</p>
+          <button
+            class="border shadow-lg border-black border-gray px-4 ml-8 mb-4 py-1 -rotate-12 transform rounded-full  bg-white">Youtube</button><br>
+          <span>
+            <button
+              class=" border shadow-lg border-black py-1 mb-4 mr-2 px-4 -rotate-12 transform rounded-full bg-[#ccef58] float-left "
+              id="insta">Instagram</button>
+            <button
+              class="border shadow-lg border-black py-1 mb-8 px-4  -rotate-12 transform rounded-full bg-[#bf90f9] absolute top-28 float-left "
+              id="linkedin">LinkedIn</button><br>
+          </span>
+          <button
+            class=" border shadow-lg border-black py-1 mb-4 px-4 ml-8 -rotate-12 transform rounded-full bg-[#efc34a] absolute  bottom-28 left-14">Facebook</button><br>
+          <button
+            class=" border shadow-lg border-black py-1 mb-2 ml-20 px-4 -rotate-12 transform rounded-full bg-red-100 absolute bottom-24  left-20">Twitter</button>
+
+        </div>
+
+      </div>
+      <footer class="p-8 rounded-lg mb-8  bg-[#FC6F42]">
+        <p class="text-white text-center text-sm">Chic Couture All Rights Reserved 2024.<span
+            class="underline pl-2">Lisencing</span></p>
+      </footer>
+    </div>
+  </div>
+</div>

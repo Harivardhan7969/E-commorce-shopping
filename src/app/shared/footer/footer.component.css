@@ -1,0 +1,16 @@
+
+/* #footer
+{
+  background-color: #FC6F42;
+} */
+@keyframes marquee {
+    
+  0% {transform: translateX(100%);}
+  /* 20%{transform: translateY(100%);} */
+}
+.marquee {
+  display: inline-block;
+  white-space: nowrap;
+  /* overflow: hidden; */
+  animation: marquee 10s linear infinite;
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <style>
+        * {
+            font-family: "Nanum Gothic", sans-serif;
+        }
+
+        /* 
+        body {
+            background-image: url('./assets/bgImageForDress.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        } */
+    </style>
+</head>
+
+<body class="text-white bg-cover h-fit bg-no-repeat  center"
+    style="background-image: url('./assets/bgImageForDress.jpg');">
+    <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+        <div class="h-screen w-1/2 flex items-center justify-center bg-transparent mx-36">
+            <div class=" bg-opacity-60 backdrop-blur-sm px-8 py-10 rounded-md border">
+                <h2 class="text-3xl text-center mb-5 font-semibold">Sign Up</h2>
+                <div class="flex items-center border-b mb-3">
+                    <input type="text" placeholder=" Full name"
+                        class="placeholder-white py-2 outline-none bg-inherit w-64" formControlName="fullName" />
+                    <i class="ri-user-line text-white"></i>
+
+                </div>
+
+
+                @if(signUpForm.get('fullName')?.touched && signUpForm.get('fullName')?.errors &&
+                signUpForm.get('fullName')?.errors?.['pattern']){
+                <div class="text-red-400 text-sm">
+                    Name should have letters with min 4 lettes
+                </div>
+
+                }@else if(signUpForm.get('fullName')?.touched && signUpForm.get('fullName')?.errors &&
+                signUpForm.get('fullName')?.errors?.['required']){
+                <div class="text-red-400 text-sm">
+                    Name is required
+                </div>
+                }
+
+
+
+                <div class="flex items-center border-b mb-3">
+                    <input type="email" placeholder="Email" class="placeholder-white py-2 outline-none bg-inherit w-64"
+                        formControlName="email" />
+                    <i class="ri-mail-line text-white"></i>
+                </div>
+
+                @if(signUpForm.get('email')?.touched && signUpForm.get('email')?.errors &&
+                signUpForm.get('email')?.errors?.['email']){
+                <div class="text-red-500 text-sm">
+                    Enter valid email
+                </div>
+
+                }@else if(signUpForm.get('email')?.touched && signUpForm.get('email')?.errors &&
+                signUpForm.get('email')?.errors?.['required']){
+                <div class="text-red-500 text-sm">
+                    Email is required
+                </div>
+                }
+
+
+
+                <div class="flex items-center border-b mb-3">
+                    <input type="password" placeholder="Password"
+                        class="placeholder-white py-2 outline-none bg-inherit w-64" formControlName="password" />
+                    @if(signUpForm.get('password')?.touched && signUpForm.get('password')?.errors &&
+                    signUpForm.get('password')?.errors?.['required']){
+                    <div class="text-red-500 text-sm">
+                    </div>
+
+
+                    }
+                    <i class="ri-lock-line text-white"></i>
+                </div>
+
+                @if(signUpForm.get('password')?.touched && signUpForm.get('password')?.errors &&
+                signUpForm.get('password')?.errors?.['required']){
+                <div class="text-red-500 text-sm">
+                    Password is required
+                </div>
+                }@else if(signUpForm.get('password')?.touched && signUpForm.get('password')?.errors &&
+                signUpForm.get('password')?.errors?.['pattern']){
+                <div class="text-red-500 text-sm">
+                    Enter valid password
+                </div>
+                }
+
+                <div class="flex items-center border-b mb-3">
+                    <input type="password" placeholder="Confirm Password"
+                        class="placeholder-white py-2 outline-none bg-inherit w-64" formControlName="confirmPassword" />
+                    <i class="ri-lock-line text-white"></i>
+                </div>
+                <div class="text-red-500 text-sm">
+                    @if (signUpForm.get('confirmPassword')?.touched &&signUpForm.get('confirmPassword')?.errors &&
+                    signUpForm.get('confirmPassword')?.errors?.['required']) {
+                    Confirm Password is required
+                    }
+                </div>
+                <div class="text-red-500">
+                    @if (signUpForm.touched && !passwordMatching && signUpForm.controls['confirmPassword'].dirty) {
+                    Confirm Password not matching with password
+                    }
+
+                </div>
+                <div class="flex items-center justify-between text-xs mb-6">
+                    <div class="flex items-center gap-1">
+                        <input type="checkbox" />
+                        <p>Remember password</p>
+                    </div>
+                    <a href="#" class="text-blue-500">Forget password?</a>
+                </div>
+                <div class="bg-orange hover:bg-gray-400 rounded-md text-black py-2 text-center mb-5 font-semibold">
+                    <button (click)="signUp()">Sign Up</button>
+                </div>
+                <div class="text-sm text-center">
+                    Already have an account? <a routerLink="/login" class="text-blue-500">Login</a>
+                </div>
+                <div class="text-red-500 text-sm">
+                    @if(errorRegistering){
+                    {{errorMessage}}
+                    }
+                </div>
+            </div>
+
+        </div>
+
+
+    </form>
+
+
+
+</body>
+
+</html>
